@@ -1,0 +1,39 @@
+body{
+    background-color: black;
+    color : white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-bar{
+    height : 70px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.height{
+    margin : 10px;
+}
+.weight{
+    margin : 10px;
+}
+.bmi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border : 1px solid white;
+    width : 350px;
+    margin: 0 auto;
+}
+.calc{
+    margin : 20px;
+}
+.res{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+.reload{
+    margin-top: 10px;
+}
