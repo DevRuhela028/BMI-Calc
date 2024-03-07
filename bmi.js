@@ -13,19 +13,22 @@ function handleClick(){
     var z = y / (x*x)
     z = z.toFixed(2)
     const ele3 = document.createElement('h2');
-    ele3.innerText = "Your BMI is :"+z;
+    ele3.innerText = "Your BMI is    :         "+z;
     const ele4 = document.getElementById('res')
     ele4.appendChild(ele3)
     const ele5 = document.createElement('h2');
-    if(z < 18.5) ele5.innerText = "underweight"
-    else if(z < 24.9) ele5.innerText = "Normal"
-    else if(z < 29.9) ele5.innerText = "Overweight"
-    else if(z < 34.9) ele5.innerText = "Obesity- I"
-    else if(z < 39.9) ele5.innerText = "Obesity - II"
-    else ele5.innerText = "Extreme Obesity"
+    if(z < 18.5) ele5.innerText = "        ,      underweight"
+    else if(z < 24.9) ele5.innerText = "       ,      Normal"
+    else if(z < 29.9) ele5.innerText = "       ,      Overweight"
+    else if(z < 34.9) ele5.innerText = "       ,      Obesity- I"
+    else if(z < 39.9) ele5.innerText = "       ,      Obesity - II"
+    else ele5.innerText = "    , Extreme Obesity"
     const ele6 = document.getElementById('category')
     ele6.appendChild(ele5)
     flag = true;
+    const ele7 = document.getElementById('res1')
+    ele7.style.border = "2px solid turquoise"
+    ele7.style.borderRadius = "10px";
 }
 function reset(){
     const e1 = document.getElementById('hi')
