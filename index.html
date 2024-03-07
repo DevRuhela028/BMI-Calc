@@ -14,26 +14,27 @@
     <div class="container">
         <div class="bmi">
             <div class="height">
-                <p>Enter height in metres</p>
-                <input placeholder = "HEIGHT" type="Number" id = "hi">
+                <p>ENTER HEIGHT IN METRE : </p>
+                <input type="Number" id = "hi" >
             </div>
             <div class="weight">
-                <p>Enter weight in kg</p>
-                <input placeholder="WEIGHT" type="Number" id = "we">
+                <p>ENTER WEIGHT IN KGs : </p>
+                <input type="Number" id = "we" >
             </div>
             <div class="calc">
                 <button id = "calc" onclick="handleClick()"> CALCULATE! </button>
             </div>
         </div>
-        <div class="res">
+        <div class="res" id = "res1">
             <div class="result" id = "res">
             </div>
             <div class="category" id = "category">
             </div>
+        </div>
             <div class="reload">
                 <button onclick = "reset()"id = "reset">Reset</button>
             </div> 
-        </div>
+        
     </div>
 </body>
 </html>
