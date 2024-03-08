@@ -1,39 +1,30 @@
-var flag = false;
-function handleClick(){
-    const ele = document.getElementById('hi')
-    const ele2 = document.getElementById('we')
-    console.log(typeof(ele.value))
-    if(ele.value === "" || ele2.value === ""){
-        alert('invalid input')
-        return;
+
+function calculatebmi() {
+    var height = parseFloat(document.getElementById('height').value);
+    var weight = parseFloat(document.getElementById('weight').value);
+  
+    if (isNaN(height) || isNaN(weight)) {
+      alert('Please enter valid numbers.');
+      return;
     }
-    if(flag == true) return;
-    var x = ele.value;
-    var y = ele2.value;
-    var z = y / (x*x)
-    z = z.toFixed(2)
-    const ele3 = document.createElement('h2');
-    ele3.innerText = "Your BMI is    :         "+z;
-    const ele4 = document.getElementById('res')
-    ele4.appendChild(ele3)
-    const ele5 = document.createElement('h2');
-    if(z < 18.5) ele5.innerText = "        ,      underweight"
-    else if(z < 24.9) ele5.innerText = "       ,      Normal"
-    else if(z < 29.9) ele5.innerText = "       ,      Overweight"
-    else if(z < 34.9) ele5.innerText = "       ,      Obesity- I"
-    else if(z < 39.9) ele5.innerText = "       ,      Obesity - II"
-    else ele5.innerText = "    , Extreme Obesity"
-    const ele6 = document.getElementById('category')
-    ele6.appendChild(ele5)
-    flag = true;
-    const ele7 = document.getElementById('res1')
-    ele7.style.border = "2px solid turquoise"
-    ele7.style.borderRadius = "10px";
-}
-function reset(){
-    const e1 = document.getElementById('hi')
-    const e2 = document.getElementById('we')
-    e1.value = "none"
-    e2.value = "none"
-    location.reload()
-}
+  
+    var bmi = (weight/(height*height))*10000;
+    let string1;
+    if(bmi < 18.5) string1 = "underweight"
+    else if(bmi < 24.9) string1 = "Normal"
+    else if(bmi < 29.9) string1 = "Overweight"
+    else if(bmi < 34.9) string1 = "Obesity - I"
+    else if(bmi < 39.9) string1 = "Obesity - II"
+    else string1 = "Extreme Obesity"
+    const ele = document.getElementById('bmiamount')
+    document.getElementById('bmiamount').innerHTML = `
+      <p>BMI: ${bmi.toFixed(2)}</p>
+      <p>Category: ${string1}</p>
+    `;
+    if(bmi < 18.5) ele.style.color = "#ff8c05"
+    else if(bmi < 24.9) ele.style.color = "Green"
+    else if(bmi < 29.9) ele.style.color = "Brown"
+    else if(bmi < 34.9) ele.style.color = "Red"
+    else if(bmi < 39.9) ele.style.color = "Red"
+    else ele.style.color = "Red"
+  }
